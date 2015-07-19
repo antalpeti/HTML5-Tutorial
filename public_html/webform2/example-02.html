@@ -32,5 +32,35 @@ and open the template in the editor.
             <input type="month" name="newinput" id="monthId"/>
             <input type="submit" value="submit" />
         </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            <label for="weekId">Week : </label>
+            <input type="week" name="newinput" id="weekId"/>
+            <input type="submit" value="submit" />
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            <label for="timeId">Time : </label>
+            <input type="time" name="newinput" id="timeId" />
+            <input type="submit" value="submit" />
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            <label for="numberId">Select Number : </label>
+            <input type="number" min="0" max="10" step="1" value="5" name="newinput" id="numberId" />
+            <input type="submit" value="submit" />
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            <label for="rangeId">Select Range : </label>
+            <input type="range" min="0" max="10" step="1" value="5" name="newinput" id="rangeId" />
+            <input type="submit" value="submit" />
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            <label for="emailId">Enter email : </label>
+            <input type="email" name="newinput" id="emailId"/>
+            <input type="submit" value="submit" />
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            <label for="urlId">Enter URL : </label>
+            <input type="url" name="newinput" id="urlId"/>
+            <input type="submit" value="submit" />
+        </form>
     </body>
 </html>
