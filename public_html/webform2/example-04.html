@@ -9,12 +9,13 @@ and open the template in the editor.
         <title>Example 03</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <base href="http://www.tutorialspoint.com/">
         <script type="text/javascript">
             function showResult()
             {
                 x = document.forms["myform"]["newinput"].value;
-                document.forms["myform"]["result"].value = x;
+                document.forms["myform"]["result1"].value = x;
+                document.forms["myform"]["result2"].value = x + x;
+                document.forms["myform"]["result3"].value = x + x + x;
             }
         </script>
     </head>
@@ -22,8 +23,10 @@ and open the template in the editor.
         <form action="/cgi-bin/html5.cgi" method="get" name="myform">
             <label for="textId">Enter a value : </label>
             <input type="text" name="newinput" id="textId"/>
-            <input type="button" value="Result"  onclick="showResult();" />
-            <output name="result"></output>
+            <input type="button" value="Result"  onclick="showResult();" /><br>
+            <output name="result1"></output><br>
+            <output name="result2"></output><br>
+            <output name="result3"></output>
         </form>
     </body>
 </html>
