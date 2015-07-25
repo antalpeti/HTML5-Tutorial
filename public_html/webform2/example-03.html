@@ -65,5 +65,17 @@ and open the template in the editor.
             <input type="tel" name="newinput" id="telId"/>
             <input type="submit" value="submit" />
         </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            <fieldset>
+                <legend>Reset Form </legend>
+                <label for="textId">Text : </label>
+                <input type="text" name="newinput" id="textId"/><br>
+                <label for="checkbox1Id">Checkbox 1 : </label>
+                <input type="checkbox" name="newinput" id="checkbox1Id" value="check1" checked/>
+                <label for="checkbox2Id">Checkbox 2: </label>
+                <input type="checkbox" name="newinput" id="checkbox2Id" value="something"/><br>
+                <input type="reset"/>
+            </fieldset>
+        </form>
     </body>
 </html>
