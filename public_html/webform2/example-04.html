@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Example 03</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <base href="http://www.tutorialspoint.com/">
+        <script type="text/javascript">
+            function showResult()
+            {
+                x = document.forms["myform"]["newinput"].value;
+                document.forms["myform"]["result"].value = x;
+            }
+        </script>
+    </head>
+    <body>
+        <form action="/cgi-bin/html5.cgi" method="get" name="myform">
+            <label for="textId">Enter a value : </label>
+            <input type="text" name="newinput" id="textId"/>
+            <input type="button" value="Result"  onclick="showResult();" />
+            <output name="result"></output>
+        </form>
+    </body>
+</html>
