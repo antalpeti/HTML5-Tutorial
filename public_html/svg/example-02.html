@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Example 02</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="../css/basic.css">
+        <style>
+            #svgelemPolygon{
+                position: relative;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+            }
+            #svgelemPolyline{
+                position: relative;
+                left: 50%;
+                -webkit-transform: translateX(-20%);
+                -ms-transform: translateX(-20%);
+                transform: translateX(-20%);
+            }
+            #svgelemRadialGradient{
+                position: relative;
+                left: 50%;
+                -webkit-transform: translateX(-40%);
+                -ms-transform: translateX(-40%);
+                transform: translateX(-40%);
+            }
+            #svgelemStar{
+                position: relative;
+                left: 50%;
+                -webkit-transform: translateX(-40%);
+                -ms-transform: translateX(-40%);
+                transform: translateX(-40%);
+            }
+        </style>
+    </head>
+    <body>
+        <h2 class="posCenter">HTML5 SVG Polygon</h2>
+
+        <svg id="svgelemPolygon" height="200" xmlns="http://www.w3.org/2000/svg">
+        <polygon  points="20,10 300,20, 170,50" fill="aqua" />
+        </svg>
+        <h2 class="posCenter">HTML5 SVG Polyline</h2>
+
+        <svg id="svgelemPolyline" height="200" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="0,0 0,30 40,0 20,50 50,30" fill="lawngreen" />
+        </svg>
+        <h2 class="posCenter">HTML5 SVG Gradient Ellipse</h2>
+
+        <svg id="svgelemRadialGradient" height="200" xmlns="http://www.w3.org/2000/svg">
+
+        <defs>
+        <radialGradient id="gradientRadial" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+        <stop offset="0%" style="stop-color:rgb(0,100,200); stop-opacity:0"/>
+        <stop offset="100%" style="stop-color:rgb(255,255,0); stop-opacity:1"/>
+        </radialGradient>
+        </defs>
+        <defs>
+        <lineargradient id="gradientLinear">
+        <stop offset="0%" style="stop-color:rgb(200,100,0); stop-opacity:0"/>
+        <stop offset="100%" style="stop-color:rgb(0,255,255); stop-opacity:1"/>
+        </lineargradient>
+        </defs>
+
+        <ellipse cx="100" cy="50" rx="100" ry="50" style="fill:url(#gradientRadial)" />
+        <circle cx="100" cy="50" r="40" style="fill:url(#gradientLinear)" />
+        </svg>
+        <h2 class="posCenter">HTML5 SVG Star</h2>
+
+        <svg id="svgelemStar" height="200" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="100,10 40,180 190,60 10,60 160,180" fill="gold"/>
+        </svg>
+    </body>
+</html>
