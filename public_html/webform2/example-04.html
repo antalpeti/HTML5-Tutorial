@@ -9,6 +9,7 @@ and open the template in the editor.
         <title>Example 03</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <base href="http://www.tutorialspoint.com/">
         <script type="text/javascript">
             function showResult()
             {
@@ -21,12 +22,41 @@ and open the template in the editor.
     </head>
     <body>
         <form action="/cgi-bin/html5.cgi" method="get" name="myform">
-            <label for="textId">Enter a value : </label>
-            <input type="text" name="newinput" id="textId"/>
-            <input type="button" value="Result"  onclick="showResult();" /><br>
-            <output name="result1"></output><br>
-            <output name="result2"></output><br>
-            <output name="result3"></output>
+            <fieldset>
+                <legend>Output</legend>
+                <label for="textId">Enter a value : </label>
+                <input type="text" name="newinput" id="textId"/>
+                <input type="button" value="Result"  onclick="showResult();" /><br>
+                <output name="result1"></output><br>
+                <output name="result2"></output><br>
+                <output name="result3"></output>
+            </fieldset>
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            <fieldset>
+                <legend>Placeholder</legend>
+                <label for="email1Id">Enter email : </label>
+                <input type="email" name="newinput" placeholder="email@example.com" id="email1Id"/>
+                <input type="submit" value="submit" />
+            </fieldset>
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            <fieldset>
+                <legend>Autofocus</legend>
+                <label for="email2Id">Enter email : </label>
+                <input type="email" name="newinput" id="email2Id" autofocus/>
+                <p>Try to submit using Submit button</p>
+                <input type="submit" value="submit" />
+            </fieldset>
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            <fieldset>
+                <legend>Required</legend>
+                <label for="email3Id">Enter email : </label>
+                <input type="email" name="newinput" id="email3Id" required/>
+                <p>Try to submit using Submit button</p>
+                <input type="submit" value="submit" />
+            </fieldset>
         </form>
     </body>
 </html>
