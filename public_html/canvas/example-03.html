@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Example 03</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <style>
+            #test {
+                width: 100px;
+                height:100px;
+                margin: 0px auto;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function drawShape() {
+                // get the canvas element using the DOM
+                var canvas = document.getElementById('mycanvas');
+
+                // Make sure we don't execute when canvas isn't supported
+                if (canvas.getContext) {
+                    // use getContext to use the canvas for drawing
+                    var ctx = canvas.getContext('2d');
+
+                    // Draw shapes
+                    ctx.beginPath();
+                    ctx.arc(75, 75, 60, 0, Math.PI * 2, true);  // Outer circle
+                    
+                    ctx.moveTo(125,75);
+                    ctx.arc(75, 75, 50, 0, Math.PI * 2, true);  // Inner circle
+
+                    ctx.moveTo(110, 75);
+                    ctx.arc(75, 75, 35, 0, Math.PI, false);   // Mouth
+                    
+                    ctx.moveTo(65, 65);
+                    ctx.fillStyle = "#FFFF00";
+                    ctx.fill();
+                    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+                    ctx.closePath();
+
+                    ctx.moveTo(95, 65);
+                    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+
+                    ctx.stroke();
+                }
+                else {
+                    alert('You need Safari or Firefox 1.5+ to see this demo.');
+                }
+            }
+        </script>
+    </head>
+
+    <body id="test" onload="drawShape();">
+        <canvas id="mycanvas"></canvas>
+    </body>
+
+</html>
