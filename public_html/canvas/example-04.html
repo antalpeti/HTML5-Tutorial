@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Example 04</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <style>
+            #test {
+                width: 200px;
+                height:200px;
+                margin: 0px auto;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function drawShape() {
+                // get the canvas element using the DOM
+                var canvas = document.getElementById('mycanvas');
+
+                // Make sure we don't execute when canvas isn't supported
+                if (canvas.getContext) {
+
+                    // use getContext to use the canvas for drawing
+                    var ctx = canvas.getContext('2d');
+
+                    // Filled triangle
+                    ctx.beginPath();
+                    ctx.moveTo(25, 25);
+                    ctx.lineTo(105, 25);
+                    ctx.lineTo(25, 105);
+                    ctx.fill();
+
+                    // Small stroked triangle
+                    ctx.beginPath();
+                    ctx.moveTo(105, 25);
+                    ctx.lineTo(125, 25);
+                    ctx.lineTo(125, 45);
+                    ctx.closePath();
+                    ctx.stroke();
+
+                    // Stroked triangle
+                    ctx.beginPath();
+                    ctx.moveTo(125, 125);
+                    ctx.lineTo(125, 45);
+                    ctx.lineTo(45, 125);
+                    ctx.closePath();
+                    ctx.stroke();
+
+                    // Small filled triangle
+                    ctx.beginPath();
+                    ctx.moveTo(25, 105);
+                    ctx.lineTo(25, 125);
+                    ctx.lineTo(45, 125);
+                    ctx.fill();
+                }
+
+                else {
+                    alert('You need Safari or Firefox 1.5+ to see this demo.');
+                }
+            }
+        </script>
+    </head>
+
+    <body id="test" onload="drawShape();">
+        <canvas id="mycanvas"></canvas>
+    </body>
+
+</html>
