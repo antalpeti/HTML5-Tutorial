@@ -6,19 +6,20 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Example 04</title>
+        <title>Example 07</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <style>
             #test {
-                width: 200px;
-                height:200px;
+                width: 100px;
+                height:100px;
                 margin: 0px auto;
             }
         </style>
 
         <script type="text/javascript">
             function drawShape() {
+
                 // get the canvas element using the DOM
                 var canvas = document.getElementById('mycanvas');
 
@@ -28,35 +29,20 @@ and open the template in the editor.
                     // use getContext to use the canvas for drawing
                     var ctx = canvas.getContext('2d');
 
-                    // Filled triangle
+                    // Draw shapes
                     ctx.beginPath();
-                    ctx.moveTo(25, 25);
-                    ctx.lineTo(105, 25);
-                    ctx.lineTo(25, 105);
-                    ctx.fill();
 
-                    // Small stroked triangle
-                    ctx.beginPath();
-                    ctx.moveTo(105, 25);
-                    ctx.lineTo(125, 25);
-                    ctx.lineTo(125, 45);
-                    ctx.closePath();
+                    ctx.moveTo(75, 25);
+                    ctx.quadraticCurveTo(25, 25, 25, 62.5);
+
+                    ctx.quadraticCurveTo(25, 100, 50, 100);
+                    ctx.quadraticCurveTo(50, 120, 30, 125);
+
+                    ctx.quadraticCurveTo(60, 120, 65, 100);
+                    ctx.quadraticCurveTo(125, 100, 125, 62.5);
+
+                    ctx.quadraticCurveTo(125, 25, 75, 25);
                     ctx.stroke();
-
-                    // Stroked triangle
-                    ctx.beginPath();
-                    ctx.moveTo(125, 125);
-                    ctx.lineTo(125, 45);
-                    ctx.lineTo(45, 125);
-                    ctx.closePath();
-                    ctx.stroke();
-
-                    // Small filled triangle
-                    ctx.beginPath();
-                    ctx.moveTo(25, 105);
-                    ctx.lineTo(25, 125);
-                    ctx.lineTo(45, 125);
-                    ctx.fill();
                 } else {
                     alert('You need Safari or Firefox 1.5+ to see this demo.');
                 }
@@ -68,4 +54,5 @@ and open the template in the editor.
         <canvas id="mycanvas"></canvas>
     </body>
 
+</html>
 </html>
