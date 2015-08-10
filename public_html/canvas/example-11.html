@@ -6,14 +6,14 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Example 09</title>
+        <title>Example 11</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <style>
             #test {
-                width:100px;
+                width: 100px;
                 height:100px;
-                margin:0px auto;
+                margin: 0px auto;
             }
         </style>
 
@@ -29,29 +29,14 @@ and open the template in the editor.
                     // use getContext to use the canvas for drawing
                     var ctx = canvas.getContext('2d');
 
-                    // Create Linear Gradients
-                    var lingrad = ctx.createLinearGradient(0, 0, 0, 150);
-
-                    lingrad.addColorStop(0, '#00EEEE');
-                    lingrad.addColorStop(0.5, '#fff');
-
-                    lingrad.addColorStop(0.5, '#22EE00');
-                    lingrad.addColorStop(1, '#fff');
-
-                    var lingrad2 = ctx.createLinearGradient(0, 50, 0, 95);
-                    lingrad2.addColorStop(0.5, '#000');
-                    lingrad2.addColorStop(1, 'rgba(0,0,0,0)');
-
-                    // assign gradients to fill and stroke styles
-                    ctx.fillStyle = lingrad;
-                    ctx.strokeStyle = lingrad2;
-
-                    // draw shapes
-                    ctx.fillRect(10, 10, 130, 130);
-                    ctx.strokeRect(50, 50, 50, 50);
-                }
-
-                else {
+                    // Create a pattern
+                    for (var i = 0; i < 7; i++) {
+                        for (var j = 0; j < 7; j++) {
+                            ctx.fillStyle = 'rgb(' + Math.floor(255 - 20.5 * i) + ',' + Math.floor(255 - 42.5 * j) + ',255)';
+                            ctx.fillRect(j * 25, i * 25, 55, 55);
+                        }
+                    }
+                } else {
                     alert('You need Safari or Firefox 1.5+ to see this demo.');
                 }
             }
