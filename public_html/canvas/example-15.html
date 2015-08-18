@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Example 15</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <style>
+            #test {
+                width: 100px;
+                height:100px;
+                margin: 0px auto;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function drawShape() {
+
+                // get the canvas element using the DOM
+                var canvas = document.getElementById('mycanvas');
+
+                // Make sure we don't execute when canvas isn't supported
+                if (canvas.getContext) {
+
+                    // use getContext to use the canvas for drawing
+                    var ctx = canvas.getContext('2d');
+
+                    ctx.shadowOffsetX = 4;
+                    ctx.shadowOffsetY = 8;
+
+                    ctx.shadowBlur = 3;
+                    ctx.shadowColor = "rgba(0, 255, 0, 0.5)";
+
+                    ctx.font = "30px Times New Roman";
+                    ctx.fillStyle = "Black";
+
+                    ctx.fillText("This is shadow test", 5, 30);
+                } else {
+                    alert('You need Safari or Firefox 1.5+ to see this demo.');
+                }
+            }
+        </script>
+    </head>
+
+    <body id="test" onload="drawShape();">
+        <canvas id="mycanvas"></canvas>
+    </body>
+
+</html>
