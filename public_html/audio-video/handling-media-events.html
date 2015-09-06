@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Handling Media Events</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript">
+            function PlayVideo() {
+                var v = document.getElementsByTagName("video")[0];
+                v.play();
+            }
+            function PauseVideo() {
+                var v = document.getElementsByTagName("video")[0];
+                v.pause();
+            }
+            function PlayAudio() {
+                var v = document.getElementsByTagName("audio")[0];
+                v.play();
+            }
+            function PauseAudio() {
+                var v = document.getElementsByTagName("audio")[0];
+                v.pause();
+            }
+        </script>
+    </head>
+    <body>
+        <form>         
+            <video  width="300" height="200" src="foo.mp4">
+                Your browser does not support the video element.
+            </video>
+            <br />
+            <input type="button" onclick="PlayVideo();"  value="Play Video"/>
+            <input type="button" onclick="PauseVideo();"  value="Pause Video"/>
+            <br />
+            <audio >
+                <source src="audio.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+            </audio>
+            <br />
+            <input type="button" onclick="PlayAudio()();"  value="Play Audio"/>
+            <input type="button" onclick="PauseAudio()();"  value="Pause Audio"/>
+        </form>
+    </body>
+</html>
